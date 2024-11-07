@@ -1,0 +1,48 @@
+Project Setup
+Create React App
+
+Ran npx create-react-app tic-tac-toe to initialize the project.
+Verified the structure: src, public, and other necessary files were generated.
+Install Dependencies
+
+    Installed dependencies for the project, though none were specifically needed outside of React for this basic version.
+Implementing Components
+    Square Component
+        Created Square component to render individual cells of the board.
+        Passed value and onSquareClick as props.
+        Tested component by hardcoding a few values to ensure buttons rendered correctly.
+    Board Component
+        Created Board component to arrange the 3x3 grid.
+        Integrated Square components and connected click handlers.
+        Added a handleClick function to prevent clicks on already occupied squares or after a win.
+    Game Component
+        Built the main Game component to handle the game state and history.
+        Used useState hooks to manage history (an array of board states) and currentMove (track move progression).
+    Winning Logic
+        Defined calculateWinner function to check for winning conditions.
+        Updated handleClick to call calculateWinner after each move.
+        Tested functionality by playing a few games and verifying win detection.
+    History Feature
+        Added move history tracking in the Game component.
+        Created buttons to allow users to "jump" to previous moves.
+        Verified that jumpTo function updates the game state to show the selected move.
+    Display Next Player
+        Added logic to display which player's turn it is.
+        Verified by toggling between "Next player: X" and "Next player: O" as the game progresses.
+    Styling
+        CSS for Layout
+        Created index.css to style the game.
+        Added styles to align the board and buttons, ensuring the 3x3 grid layout.
+    Summary of Components
+        Game
+        Manages the game state and renders the main layout.
+        Board
+        Displays a grid of squares and handles user input.
+        Square
+        Represents a single cell on the tic-tac-toe board.
+    Code Notes
+        calculateWinner function iterates through potential win lines, confirming a winner if three squares contain the same symbol.
+        useState for history and currentMove effectively enables move tracking and game state management.
+Final Thoughts
+Successfully implemented tic-tac-toe using React.
+The Game component structure and history tracking allow easy extension for future features, such as resetting the game.
